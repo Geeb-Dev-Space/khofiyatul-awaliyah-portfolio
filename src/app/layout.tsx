@@ -5,6 +5,8 @@ import { aboutMe } from "@/data/aboutme";
 import { customMetadata } from "@/data/title-description";
 import { Heart } from "lucide-react";
 import Link from "next/link";
+import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -77,6 +79,8 @@ export default function RootLayout({
             </div>
           </div>
         </footer>
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );
